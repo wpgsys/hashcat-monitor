@@ -11,15 +11,6 @@ The **Hashcat Output Monitor** is a cross-platform Python application designed t
 - **Log Tracking**: Records detailed logs of changes detected in the file.
 - **Cross-Platform**: Compatible with Windows, macOS, and Linux.
 
-## Installation
-
-```bash
-git clone https://github.com/yourusername/hashcat-output-monitor.git
-cd hashcat-output-monitor
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-pip install -r requirements.txt
-
 ---
 
 **Created by [D.S](https://wpgsys.ca)**
@@ -28,4 +19,13 @@ pip install -r requirements.txt
 
 ---
 
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/hashcat-output-monitor.git
+cd hashcat-output-monitor
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt
 
