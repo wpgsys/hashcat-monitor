@@ -19,3 +19,13 @@ cd hashcat-output-monitor
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
+
+---
+
+**Created by [D.S](https://wpgsys.ca)**
+
+*Contact: ds@wpgsys.ca*
+
+---
+
+
