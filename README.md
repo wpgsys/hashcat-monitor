@@ -23,7 +23,7 @@ The **Hashcat Output Monitor** is a cross-platform Python application designed t
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/hashcat-output-monitor.git
+git clone https://github.com/wpgsys/hashcat-monitor.git
 cd hashcat-output-monitor
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
