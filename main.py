@@ -123,7 +123,7 @@ def select_file():
 # Create the main window with a modern look
 window = tk.Tk()
 window.title("Hashcat Output Monitor")
-window.geometry("700x400")  # Set the initial size of the window
+window.geometry("850x400")  # Set the initial size of the window
 
 # Apply a theme
 style = ttk.Style()
