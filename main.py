@@ -27,7 +27,11 @@ def stop_all_sounds():
 # Function to monitor the file for changes
 def monitor_file(file_path, text_area, log_area, stop_event):
     last_content = ""
-    file_was_empty = True  # Flag to check if file was initially empty
+
+    # Check if the file is initially empty
+    with open(file_path, 'r') as file:
+        file_content = file.read()
+        file_was_empty = len(file_content.strip()) == 0  # Check if the file is empty (ignores whitespace)
 
     while not stop_event.is_set():
         try:
@@ -39,9 +43,9 @@ def monitor_file(file_path, text_area, log_area, stop_event):
                     text_area.insert(tk.END, current_content)
                     text_area.yview(tk.END)
 
-                    if file_was_empty and current_content:
+                    if file_was_empty and current_content.strip():
                         play_alarm()
-                        file_was_empty = False
+                        file_was_empty = False  # Update to indicate the file is no longer empty
                         log_area.insert(tk.END, "File was initially empty. Alarm sound played.\n")
                     else:
                         play_notification()
@@ -71,6 +75,7 @@ def monitor_file(file_path, text_area, log_area, stop_event):
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred while monitoring the file: {str(e)}")
             stop_event.set()
+
 
 # Function to start monitoring
 def start_monitoring():
